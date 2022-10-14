@@ -18,7 +18,7 @@ li{
 
 hr {
     width: 100%;
-    border-top: hsl(229, 8%, 60%);
+    // border-top: hsl(231, 69%, 60%);
 }
 
 p{
@@ -31,12 +31,12 @@ body{
     padding: 0;
     font-size: 1rem;
     box-sizing: border-box;
-    max-width: 1440px;
     font-family: "Rubik", sans-serif;
     min-height: 100%;
-    // background-color: hsl(217°, 26%, 95%);
     background-color: #ffffff;
-background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+    background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+        // max-width: 1440px;
+    width: 100%;
 }
 
 header {
@@ -44,20 +44,19 @@ header {
     justify-content: center;
     padding: 2rem;
     color: hsl(0, 100%, 0%);
-}
-
-.navbar__item{
-    display: inline-block;
-    padding: 0 1.5rem;
-    cursor: pointer;
+    .navbar__item{
+        display: inline-block;
+        padding: 0 1.5rem;
+        cursor: pointer;
+    }
 }
 
 /*--------Hero------------*/
 
 .hero-section{
-    padding: 3% 5%;
+    padding: 2% 10%;
+    width: 80%;
     display: flex;
-    width: 90%;
     &__description{
         width: 50%;
         padding: 2rem 6rem;
@@ -89,9 +88,9 @@ header {
 /*--------About Me------------*/
 
 .about{
-    padding: 3% 5%;
+    padding: 2% 10%;
+    width: 80%;
     display: flex;
-    width: 90%;
     background-color: white;
     &__description{
         display: flex;
@@ -108,9 +107,9 @@ header {
 /*--------Skills------------*/
 
 .skills{
-    padding: 3% 5%;
+    padding: 2% 10%;
+    width: 80%;
     display: flex;
-    width: 90%;
     h1{
         text-align: center;
     }
@@ -138,7 +137,7 @@ header {
     }
     &__grid{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 50% 50%;
         padding: 1rem;
         &-item{
             padding: 1rem;
@@ -147,13 +146,17 @@ header {
             img{
                 width: 30%;
             }
+            p{
+                width: auto;
+            }
         }   
     }
 }
 /*--------Education------------*/
 .education-section{
-    padding: 3% 5%;
-    width: 90%;
+    padding: 2% 10%;
+    width: 80%;
+    // background-color: hsla(231, 69%, 70%, 0.4);
     &__description{
         text-align: center;
         width: 50%;
@@ -162,17 +165,16 @@ header {
     &__cards{
         display: flex;
         justify-content: space-around;
+        text-align: center;
     }
     &__card{
         width:25%;
         height: 100%;
-        padding: 1rem;
+        padding: 2rem;
         box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 1rem;
-    }
-    &__card:hover{
         background-color: hsl(231, 69%, 70%);
         color: white;
+        border-radius: 1rem;
         p{
             color:white;
         }
@@ -181,8 +183,8 @@ header {
 
 /*--------Work Section------------*/
 .work-section{
-    padding: 3% 5%;
-    width: 90%;
+    padding: 2% 10%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,9 +209,10 @@ header {
 
 /*--------Contact Me------------*/
 .contact-me{
-    padding: 3% 5%;
-    width: 90%;
+    padding: 2% 10%;
+    width: 80%;
     text-align: center;
+    background-color: hsla(231, 69%, 70%, 0.4);
     .btn{
         display: inline-block;
         margin:1rem;
@@ -232,19 +235,17 @@ header {
 
 /*--------Footer------------*/
 .footer{
-    padding: 2rem;
+    padding: 0 0 1rem 0;
     text-align: center;
     background-color: hsla(231, 69%, 70%, 0.4);
-    hr {
-        margin: 2rem 0;
-    }
     &__link{
-        font-size: 1.2rem;
-        margin: 10px 30px;
+        padding:1rem;
+        img{
+            width:2%;
+        }
     }
     &__copyright{
-        padding: 2rem;
         font-size: 0.8rem;
-        color: hsl(229, 8%, 60%);
+        color: white;
     }
 }
