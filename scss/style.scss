@@ -25,6 +25,7 @@ body{
     max-width: 1440px;
     font-family: "Rubik", sans-serif;
     min-height: 100%;
+    // background-color: hsl(217°, 26%, 95%);
 }
 
 header {
@@ -128,11 +129,29 @@ header {
             img{
                 width: 30%;
             }
-            p{
-                color: hsl(229, 8%, 60%);
-            }
-        }
+        }   
+    }
+    p{
+        color: hsl(229, 8%, 60%);
     }
 }
 
 /*--------Footer------------*/
+.footer{
+    padding: 2rem;
+    text-align: center;
+    hr {
+        margin: 2rem 0;
+        width: 100%;
+        border-top: hsl(229, 8%, 60%);
+    }
+    &__link{
+        font-size: 1.2rem;
+        margin: 10px 30px;
+    }
+    &__copyright{
+        padding: 2rem;
+        font-size: 0.8rem;
+        color: hsl(229, 8%, 60%);
+    }
+}
