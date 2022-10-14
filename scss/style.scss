@@ -16,6 +16,15 @@ li{
     list-style: none;
 }
 
+hr {
+    width: 100%;
+    border-top: hsl(229, 8%, 60%);
+}
+
+p{
+    color: hsl(229, 8%, 60%);
+}
+
 // /*--------Header------------*/
 body{
     margin: 0 auto;
@@ -26,6 +35,8 @@ body{
     font-family: "Rubik", sans-serif;
     min-height: 100%;
     // background-color: hsl(217°, 26%, 95%);
+    background-color: #ffffff;
+background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
 }
 
 header {
@@ -55,6 +66,11 @@ header {
         }
         p{
             color: hsl(229, 8%, 60%);
+            line-height: 1.6rem;
+        }
+        img{
+            width:3%;
+            padding: 0 0.5rem 0 0;
         }
     }
     &__image{
@@ -76,6 +92,7 @@ header {
     padding: 3% 5%;
     display: flex;
     width: 90%;
+    background-color: white;
     &__description{
         display: flex;
         flex-direction: column;
@@ -126,13 +143,90 @@ header {
         &-item{
             padding: 1rem;
             text-align: center;
+            // border: 1px solid black;
             img{
                 width: 30%;
             }
         }   
     }
-    p{
+}
+/*--------Education------------*/
+.education-section{
+    padding: 3% 5%;
+    width: 90%;
+    &__description{
+        text-align: center;
+        width: 50%;
+        margin: 2rem auto;
+    }
+    &__cards{
+        display: flex;
+        justify-content: space-around;
+    }
+    &__card{
+        width:25%;
+        height: 100%;
+        padding: 1rem;
+        box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+    }
+    &__card:hover{
+        background-color: hsl(231, 69%, 70%);
+        color: white;
+        p{
+            color:white;
+        }
+    }
+}
+
+/*--------Work Section------------*/
+.work-section{
+    padding: 3% 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__container{
+        width: 60%;
+        padding: 1rem;
+    }
+    &__title{
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 1rem 0;
+    }
+    &__title:hover{
+        color: hsl(0, 94%, 66%);
+    }
+    &__description{
         color: hsl(229, 8%, 60%);
+        line-height: 1.6;
+        // padding-top: 1rem;
+    }
+}
+
+/*--------Contact Me------------*/
+.contact-me{
+    padding: 3% 5%;
+    width: 90%;
+    text-align: center;
+    .btn{
+        display: inline-block;
+        margin:1rem;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 0.3rem;
+        color: hsl(0, 100%, 100%);
+        background-color: hsl(231, 69%, 60%);
+        border: 2px solid transparent;
+    }
+    .btn:hover{
+        color: hsl(231, 69%, 60%);
+        border: 2px solid hsl(231, 69%, 60%);
+        background-color: hsl(0, 100%, 100%);
+        transition: all 0.3s ease 0s;
     }
 }
 
@@ -140,10 +234,9 @@ header {
 .footer{
     padding: 2rem;
     text-align: center;
+    background-color: hsla(231, 69%, 70%, 0.4);
     hr {
         margin: 2rem 0;
-        width: 100%;
-        border-top: hsl(229, 8%, 60%);
     }
     &__link{
         font-size: 1.2rem;
