@@ -1,0 +1,19 @@
+.work-section{
+    @include center-position;
+    @include flex-position;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    &__container{
+        width: 60%;
+        padding: 1rem;
+    }
+    &__title{
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 1rem 0;
+    }
+    &__title:hover{
+        color: $active-color;
+    }
+}

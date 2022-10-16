@@ -1,0 +1,12 @@
+.about{
+    @include center-position;
+    display: flex;
+    background-color: $white;
+    &__description{
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        @include flex-position;
+        padding: 0 5rem;
+    }
+}

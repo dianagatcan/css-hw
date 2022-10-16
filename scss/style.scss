@@ -1,14 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+@import 'config';
+@import './components/header';
+@import './components/hero';
+@import './components/aboutme';
+@import './components/skills';
+@import './components/education';
+@import './components/work';
+@import './components/footer';
+@import 'mixins';
 
 /*--------GLOBAL------------*/
 
 a{
     text-decoration: none;
-    color: hsl(0, 100%, 0%); 
+    color: $black; 
 }
 
 a:hover{
-    color: hsl(0, 94%, 66%);
+    color: $active-color;
 }
 
 li{
@@ -18,11 +26,11 @@ li{
 
 hr {
     width: 100%;
-    // border-top: hsl(231, 69%, 60%);
 }
 
 p{
-    color: hsl(229, 8%, 60%);
+    color: $text-color;
+    line-height: 1.6rem;
 }
 
 // /*--------Header------------*/
@@ -33,219 +41,8 @@ body{
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
     min-height: 100%;
-    background-color: #ffffff;
+    background-color: $white;
     background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
         // max-width: 1440px;
     width: 100%;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    color: hsl(0, 100%, 0%);
-    .navbar__item{
-        display: inline-block;
-        padding: 0 1.5rem;
-        cursor: pointer;
-    }
-}
-
-/*--------Hero------------*/
-
-.hero-section{
-    padding: 2% 10%;
-    width: 80%;
-    display: flex;
-    &__description{
-        width: 50%;
-        padding: 2rem 6rem;
-        h1{
-            font-size: 4rem;
-        }
-        p{
-            color: hsl(229, 8%, 60%);
-            line-height: 1.6rem;
-        }
-        img{
-            width:3%;
-            padding: 0 0.5rem 0 0;
-        }
-    }
-    &__image{
-        width: 50%;
-        display: flex;
-        img{
-            width: 50%;
-            margin: auto;
-            border-radius: 80%;
-            border: 1rem solid hsl(231, 69%, 60%);
-            box-shadow: 0 0 0 1rem hsl(231, 69%, 70%), 
-        }
-    }
-}
-
-/*--------About Me------------*/
-
-.about{
-    padding: 2% 10%;
-    width: 80%;
-    display: flex;
-    background-color: white;
-    &__description{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 5rem;
-        p{
-            color: hsl(229, 8%, 60%);
-            line-height: 1.6;
-        }
-    }
-}
-
-/*--------Skills------------*/
-
-.skills{
-    padding: 2% 10%;
-    width: 80%;
-    display: flex;
-    h1{
-        text-align: center;
-    }
-    &__tech{
-        width:50%;
-        padding: 1rem;
-        .html {width: 90%}
-        .css {width: 70%}
-        .js {width: 60%}
-        .react {width: 40%}
-    }
-    &__bar {
-        background-color: #ddd;
-        &__percentage{
-            text-align: right;
-            padding-top: 0.2rem; 
-            padding-bottom: 0.2rem; 
-            color: white; 
-            background-color:hsl(0, 94%, 66%);
-        }
-    }
-    &__prof{
-        width: 50%;
-        padding: 1rem;
-    }
-    &__grid{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        padding: 1rem;
-        &-item{
-            padding: 1rem;
-            text-align: center;
-            // border: 1px solid black;
-            img{
-                width: 30%;
-            }
-            p{
-                width: auto;
-            }
-        }   
-    }
-}
-/*--------Education------------*/
-.education-section{
-    padding: 2% 10%;
-    width: 80%;
-    // background-color: hsla(231, 69%, 70%, 0.4);
-    &__description{
-        text-align: center;
-        width: 50%;
-        margin: 2rem auto;
-    }
-    &__cards{
-        display: flex;
-        justify-content: space-around;
-        text-align: center;
-    }
-    &__card{
-        width:25%;
-        height: 100%;
-        padding: 2rem;
-        box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.2);
-        background-color: hsl(231, 69%, 70%);
-        color: white;
-        border-radius: 1rem;
-        p{
-            color:white;
-        }
-    }
-}
-
-/*--------Work Section------------*/
-.work-section{
-    padding: 2% 10%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &__container{
-        width: 60%;
-        padding: 1rem;
-    }
-    &__title{
-        font-size: 1.2rem;
-        cursor: pointer;
-        padding: 1rem 0;
-    }
-    &__title:hover{
-        color: hsl(0, 94%, 66%);
-    }
-    &__description{
-        color: hsl(229, 8%, 60%);
-        line-height: 1.6;
-        // padding-top: 1rem;
-    }
-}
-
-/*--------Contact Me------------*/
-.contact-me{
-    padding: 2% 10%;
-    width: 80%;
-    text-align: center;
-    background-color: hsla(231, 69%, 70%, 0.4);
-    .btn{
-        display: inline-block;
-        margin:1rem;
-        padding: 1rem 1.5rem;
-        cursor: pointer;
-        font-weight: bold;
-        box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 0.3rem;
-        color: hsl(0, 100%, 100%);
-        background-color: hsl(231, 69%, 60%);
-        border: 2px solid transparent;
-    }
-    .btn:hover{
-        color: hsl(231, 69%, 60%);
-        border: 2px solid hsl(231, 69%, 60%);
-        background-color: hsl(0, 100%, 100%);
-        transition: all 0.3s ease 0s;
-    }
-}
-
-/*--------Footer------------*/
-.footer{
-    padding: 0 0 1rem 0;
-    text-align: center;
-    background-color: hsla(231, 69%, 70%, 0.4);
-    &__link{
-        padding:1rem;
-        img{
-            width:2%;
-        }
-    }
-    &__copyright{
-        font-size: 0.8rem;
-        color: white;
-    }
 }
