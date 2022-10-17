@@ -12,7 +12,6 @@
     }
     &__card{
         width:25%;
-        height: 100%;
         padding: 2rem;
         box-shadow: $shadow;
         background-color: $second-color;
@@ -21,5 +20,17 @@
         p{
             color:$white;
         }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .education-section{
+        &__cards{
+            flex-direction: column;
+        }
+        &__card{
+        width: 70%;
+        margin: 1rem 0;
+    }
     }
 }

@@ -2,6 +2,9 @@
 .about{
     @include center-position($display:flex);
     background-color: $white;
+    img{
+        width: 50%;
+    }
     &__description{
         @include flex-position;
         padding: 0 5rem;
