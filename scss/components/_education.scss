@@ -1,3 +1,4 @@
+@import '../mixins';
 .education-section{
     @include center-position;
     &__description{
@@ -6,15 +7,14 @@
         margin: 2rem auto;
     }
     &__cards{
-        display: flex;
-        justify-content: space-around;
+        @include flex-position($justify:space-around, $direction:row);
         text-align: center;
     }
     &__card{
         width:25%;
         height: 100%;
         padding: 2rem;
-        box-shadow: 2px 5px 6px $shadow-color;
+        box-shadow: $shadow;
         background-color: $second-color;
         color: $white;
         border-radius: 1rem;

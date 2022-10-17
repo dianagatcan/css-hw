@@ -1,6 +1,6 @@
+@import '../mixins';
 header {
-    display: flex;
-    justify-content: center;
+    @include flex-position;
     padding: 2rem;
     .navbar__item{
         display: inline-block;

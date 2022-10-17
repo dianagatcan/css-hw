@@ -1,4 +1,4 @@
-/*--------Contact Me------------*/
+@import '../mixins';
 .contact-me{
     @include center-position;
     text-align: center;
@@ -9,7 +9,7 @@
         padding: 1rem 1.5rem;
         cursor: pointer;
         font-weight: bold;
-        box-shadow: 2px 5px 6px $shadow-color;
+        box-shadow: $shadow;
         border-radius: 0.3rem;
         color: $white;
         background-color: $base-color;

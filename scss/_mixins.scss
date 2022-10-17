@@ -1,6 +1,7 @@
-@mixin center-position{
+@mixin center-position($display:block){
     padding: 2% 10%;
     width: 80%;
+    display: $display;
 }
 
 @mixin flex-position($direction:column, $justify: center, $align: center){

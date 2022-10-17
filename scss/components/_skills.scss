@@ -1,6 +1,7 @@
+@import '../mixins';
+
 .skills{
-    @include center-position;
-    display: flex;
+    @include center-position($display:flex);
     h1{
         text-align: center;
     }
@@ -16,8 +17,7 @@
         background-color: $text-color;
         &__percentage{
             text-align: right;
-            padding-top: 0.2rem; 
-            padding-bottom: 0.2rem; 
+            padding: 0.2rem 0;
             color: $white; 
             background-color:$active-color;
         }
