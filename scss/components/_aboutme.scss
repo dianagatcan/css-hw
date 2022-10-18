@@ -10,3 +10,16 @@
         padding: 0 5rem;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .about{
+        margin: 2rem auto;
+        width:80%;
+        &__description{
+            padding: 0;
+        }
+        img{
+            display:none;
+        }
+    }
+}

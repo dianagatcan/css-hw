@@ -16,3 +16,12 @@
         color: $active-color;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .work-section{
+        &__container{
+            width: 80%;
+            padding: 1rem;
+        }
+    }
+}
